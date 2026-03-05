@@ -1,0 +1,111 @@
+.page-business {
+  .header {
+    background-color: $secondary-color;
+    padding-bottom: 0;
+  }
+}
+
+.section {
+  &--business {
+    padding: 80px 0 487px;
+    background-image: url(../../../img/business-bg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: calc(50% + 175px) center;
+  }
+
+  &--holding {
+    padding: 180px 0;
+  }
+
+  &--production {
+    padding: 200px 0;
+  }
+}
+
+.subheading {
+  &--holding {
+    margin-bottom: 90px;
+  }
+
+  &--production {
+    margin-bottom: 50px;
+  }
+}
+
+.description {
+  &--holding {
+    @include mainText;
+  }
+
+  &--production {
+    @include mainText;
+    font-size: 20px;
+    margin-bottom: 90px;
+  }
+}
+
+.content {
+  gap: 30px;
+  padding: 90px 0;
+
+  &__title {
+    font-family: $secondary-font-family;
+    font-weight: $font-medium;
+    font-size: 23px;
+  }
+
+  &__description {
+    @include mainText;
+  }
+
+  &__list {
+    gap: 30px;
+  }
+
+  &__item {
+    display: flex;
+    gap: 20px;
+    padding-left: 4px;
+  }
+
+  &__icon {
+    width: 18px;
+    height: 13px;
+    display: block;
+
+    &-wrapper {
+      width: 36px;
+      height: 36px;
+      flex: none;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      @include flexible;
+      border-radius: 40px;
+    }
+  }
+}
+
+.production {
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__counter {
+    font-family: $secondary-font-family;
+    font-weight: $font-medium;
+    font-size: 96px;
+    color: $color-light;
+  }
+
+  &__text {
+    @include mainText;
+    font-size: 20px;
+    color: $color-light;
+  }
+}

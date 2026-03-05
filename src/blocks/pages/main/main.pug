@@ -1,0 +1,146 @@
+- var keySectionItems = [{ image: 'img/key-item1.svg', title: 'Производство продуктов питания', text: 'Стратегическим приоритетом Kavaya Group является производство натуральных молочных продуктов из экологически чистого сырья. Полный цикл — от собственной сырьевой базы до готовой продукции — обеспечивает стабильное качество, безопасность и независимость от внешних факторов.' },{ image: 'img/key-item2.svg', title: 'IT-технологии и коммуникации', text: 'Kavaya Group развивает направления, связанные с цифровыми решениями, автоматизацией процессов и современными коммуникационными технологиями, поддерживая эффективность как внутренних, так и партнёрских проектов.' },{ image: 'img/key-item3.svg', title: 'Бизнес-консалтинг', text: 'Группа реализует проекты в сфере стратегического и операционного консалтинга, опираясь на собственный практический опыт управления бизнесом и масштабирования многопрофильных активов.' },{ image: 'img/key-item4.svg', title: 'Медицинские услуги', text: 'Отдельным направлением деятельности являются медицинские сервисы, ориентированные на качество, соответствие нормативным требованиям и устойчивое развитие в рамках долгосрочной стратегии группы.' },{ image: 'img/key-item5.svg', title: 'Продюсерская студия', text: 'Группа реализует проекты в сфере стратегического и операционного консалтинга, опираясь на собственный практический опыт управления бизнесом и масштабирования многопрофильных активов.' },{ image: 'img/key-item6.svg', title: 'Инвестиционная экспертиза управление активами', text: 'Отдельным направлением деятельности являются медицинские сервисы, ориентированные на качество, соответствие нормативным требованиям и устойчивое развитие в рамках долгосрочной стратегии группы.' },]
+
+- var modelSectionItems = [{image: 'img/model-item1.svg', title: 'собственных активах и ресурсах;',}, {image: 'img/model-item2.svg', title: 'диверсификации направлений деятельности;',}, {image: 'img/model-item3.svg', title: 'централизованном управлении и контроле;',}]
+
+- var investSectionItems = [{image: 'img/invest-item1.svg', title: 'собственная производственная база;',}, {image: 'img/invest-item2.svg', title: 'масштабируемая структура бизнеса;',}, {image: 'img/invest-item3.svg', title: 'опыт управления в нескольких отраслях;',}, {image: 'img/invest-item4.svg', title: 'фокус на долгосрочный рост и капитализацию.',}]
+
+- var partnersSectionItems = [{image: 'img/partners-item1.svg', title: 'надёжности и финансовой<br>дисциплины',}, {image: 'img/partners-item2.svg', title: 'прозрачности<br> бизнес-процессов',}, {image: 'img/partners-item3.svg', title: 'взаимной<br>ответственности',}, {image: 'img/partners-item4.svg', title: 'ориентации на<br>долгосрочный результат',}, ]
+
+main(class='main')
+
+	section(class='section section--dark section--top')
+		div(class='background')
+			video(class='background__top-video' poster='img/top-video-poster.png' muted loop autoplay playsinline preload='auto')
+				source(src='img/video/lenta.mp4' type='video/mp4')
+			div(class='background__blur-layer')
+		div(class='container container--top')
+			h1(class='heading') Надёжное партнёрство.#[br]Устойчивый бизнес.#[br]Долгосрочный рост.
+			div(class='wrapper wrapper--flex wrapper--top')
+				div(class='flex-column wrapper__item wrapper__item--about')
+					div(class='map')
+						img(class='map__image' src='img/map.svg' alt='Карта РФ, на которой точками обозначены регионы присутствия компании')
+					h2(class='subheading subheading--primary subheading--light subheading--accent subheading--about') О компании
+					p(class='description description--light description--about') Kavaya Group &ndash; это объединение компаний, последовательно развивающееся на протяжении многих лет и уверенно занимающее позиции в стратегически значимых отраслях.
+					p(class='description description--pale description--small') Наша деятельность строится на принципах прозрачности, ответственности и финансовой устойчивости.#[br]#[br]Мы фокусируемся на создании долгосрочной ценности, контроле качества и эффективном управлении активами, что позволяет группе демонстрировать стабильный рост и высокий уровень доверия со стороны партнёров.
+				div(class='flex-column wrapper__item wrapper__item--company')
+					div(class='background-logo')
+						img(class='background-logo__image' src='img/background-logo.svg')
+					h2(class='subheading subheading--primary subheading--light subheading--company') Kavaya Group
+					p(class='description description--light description--small description--company') многопрофильная группа компаний федерального уровня, реализующая проекты в ключевых секторах экономики. Мы создаём устойчивые бизнес-модели, основанные на собственных ресурсах, управляемости процессов и долгосрочном сотрудничестве с партнёрами и инвесторами.
+					div(class='video-wrapper') 
+						video(class='top-video' poster='img/video-poster.png' muted loop autoplay playsinline)
+							source(src='img/video/0_Factory_Brewery_1280x720.mp4' type='video/mp4')
+						div(class='top-video__logo-container')
+							span(class='top-video__logo-text') Kavaya Group
+							img(class='top-video__logo' src='img/top-video-logo.png' alt='')
+			div(class='circle circle--light')
+			div(class='circle circle--dark')
+		div(class='background-bottom')
+			div(class='background-bottom__layer')
+				video(class='background-bottom__video' muted loop autoplay playsinline)
+					source(src='img/video/lenta.mp4' type='video/mp4')
+
+	section(class='section section--light section--key')
+		div(class='container container--key')
+			h2(class='subheading subheading--key') Ключевые направления деятельности
+			ul(class='key-list')
+				each item in keySectionItems
+					li(class='key-item')
+						div(class='key-item__image-wrapper')
+							img(class='key-item__image' src= item.image)
+						div(class='key-item__content')
+							div(class='key-item__title')= item.title
+							span(class='key-item__text')= item.text
+
+	section(class='section section--dark section--brands')
+		div(class='container brands__container')
+			div(class='brands__wrapper')
+				h2(class='subheading brands__title') Наши бренды#[br]и активы
+				p(class='brands__description') В структуру Kavaya Group входят известные торговые марки Food Milk и «Ваша ферма».
+				p(class='brands__text') Бренд «Ваша ферма» объединяет несколько животноводческих хозяйств и собственное современное молочное производство, расположенное в Московской и Владимирской областях.
+				div(class='brands__list-wrapper')
+					p(class='brands__list-title') Наличие собственных производственных активов обеспечивает:
+					ul(class='brands__list')
+						li(class='brands__item')
+							div(class='brands__icon-wrapper')
+								svg(class='brands__icon' viewBox="0 0 18 13")
+									use(xlink:href='img/svg/sprite.svg#check')
+							span(class='brands__item-text') стабильность поставок;
+						li(class='brands__item')
+							div(class='brands__icon-wrapper')
+								svg(class='brands__icon' viewBox="0 0 18 13")
+									use(xlink:href='img/svg/sprite.svg#check')
+							span(class='brands__item-text') контроль качества на всех этапах;
+						li(class='brands__item')
+							div(class='brands__icon-wrapper')
+								svg(class='brands__icon' viewBox="0 0 18 13")
+									use(xlink:href='img/svg/sprite.svg#check')
+							span(class='brands__item-text') высокую операционную эффективность.
+			div(class='brands__video-container')
+				div(class='brands__video-wrapper')
+					video(class='brands__video' poster='img/brands-poster.png' muted loop autoplay playsinline)
+						source(src='img/video/0_Engineer_Factory_3840x2160 (cut 720).mp4' type='video/mp4')
+				ul(class='brands__logo-list')
+					li(class='brands__logo-item')
+						img(class='brands__logo-icon' src="img/logo-dmovie.png")
+					li(class='brands__logo-item')
+						img(class='brands__logo-icon' src="img/logo-lafinele.png")
+					li(class='brands__logo-item')
+						img(class='brands__logo-icon' src="img/logo-viacapital.png")
+					li(class='brands__logo-item')
+						img(class='brands__logo-icon' src="img/logo-starquality.png")
+
+	section(class='section section--light section--model')
+		div(class='container container--model')
+			div(class='model__wrapper')
+				div(class='model__heading')
+					h2(class='subheading model__title') Бизнес-модель #[br]и&nbsp;подход
+					p(class='description model__description') Такой подход позволяет группе минимизировать риски, сохранять устойчивость в меняющихся экономических условиях и последовательно открывать новые направления бизнеса.
+				div(class='model__base')
+					div(class='model__base-title') Бизнес-модель Kavaya Group основана на:
+					ul(class='model__list')
+						each item in modelSectionItems
+							li(class='model__item')
+								div(class='model__icon-wrapper')
+									img(class='model__icon' src= item.image)
+								span(class='model__text')= item.title
+
+	section(class='section section--dark section--partners')
+		div(class='container')
+			h2(class='subheading partners__title') Партнёрам
+			div(class='partners__base')
+				div(class='partners__base-title') Мы выстраиваем сотрудничество на принципах:
+				ul(class='partners__list')
+					each item in partnersSectionItems
+						li(class='partners__item')
+							div(class='partners__icon-wrapper')
+								img(class='partners__icon' src= item.image)
+							span(class='partners__text') !{item.title}
+			p(class='description partners__description') Kavaya Group рассматривает партнёрство как стратегический ресурс и&nbsp;нацелена на формирование устойчивых деловых отношений.
+		div(class='background-bottom background-bottom--partners')
+			div(class='background-bottom__layer')
+				video(class='background-bottom__video background-bottom__video--partners' muted loop autoplay playsinline)
+					source(src='img/video/lenta.mp4' type='video/mp4')
+
+	section(class='section section--light section--invest')
+		div(class='container')
+			div(class='model__wrapper')
+				div(class='model__heading')
+					h2(class='subheading model__title') Инвесторам
+					p(class='description model__description') Kavaya Group предлагает инвестиционное участие в системно выстроенном, диверсифицированном бизнесе с реальными активами и понятной моделью развития.
+				div(class='model__base')
+					div(class='model__base-title') Наши ключевые преимущества для инвесторов:
+					ul(class='model__list')
+						each item in investSectionItems
+							li(class='model__item')
+								div(class='model__icon-wrapper')
+									img(class='model__icon' src= item.image)
+								span(class='model__text')= item.title
+
+	section(class='section section--mission')
+		div(class='container')
+			div(class='mission__wrapper')
+				div(class='model__heading mission__heading')
+					h2(class='subheading model__title') Миссия
+					p(class='mission__description') Создавать устойчивые, социально и экономически значимые бизнесы, основанные на качестве, ответственности и доверии, обеспечивая надёжное партнёрство и стабильное развитие.
+

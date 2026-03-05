@@ -1,0 +1,15 @@
+extends layouts/default
+include helpers/mixins
+
+block variables
+	- const title = "Главная"
+	- let page = "main";
+
+block content
+	include ../blocks/modules/header/header
+	include ../blocks/pages/main/main
+	include ../blocks/modules/footer/footer
+
+block scripts
+	script(src="js/vendor.js")
+	script(src="js/main.js")

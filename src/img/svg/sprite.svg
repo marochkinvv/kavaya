@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+
+  <symbol id="arrow-down" fill="none" viewBox="0 0 12 7">
+    <path stroke="currentColor" stroke-width="1.5" d="m.53.53 5.01 5.01L10.55.53"/>
+  </symbol>
+
+  <svg id="check" fill="none" viewBox="0 0 18 13">
+    <path stroke="currentColor" stroke-width="1.4" d="m.495 6.568 5.136 5.136L16.841.495"/>
+  </svg>
+
+</svg>

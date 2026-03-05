@@ -1,0 +1,8 @@
+.header {
+  @include flexible;
+  position: relative;
+  width: 100%;
+  padding: 68px 0 79px;
+  background-color: $page-header-bg;
+  color: $color-light;
+}

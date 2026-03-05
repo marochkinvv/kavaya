@@ -1,0 +1,24 @@
+@mixin flexible() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin mainText() {
+  font-family: $primary-font-family;
+  font-weight: $font-medium;
+  font-size: 16px;
+}
+
+@mixin subheading() {
+  font-family: $secondary-font-family;
+  font-weight: $font-medium;
+  font-size: 48px;
+}
+
+@mixin line-clamp($lines) {
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

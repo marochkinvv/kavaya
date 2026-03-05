@@ -1,0 +1,74 @@
+html {
+  scrollbar-gutter: stable;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $primary-font-family;
+  color: $color-dark;
+  background-color: $color-light;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.main,
+.section {
+  width: 100%;
+  position: relative;
+}
+
+.section {
+  @include flexible;
+  &--dark {
+    background-color: $primary-color;
+  }
+  &--light {
+    background-color: $color-light;
+  }
+  &--gold {
+    background-color: $secondary-color;
+  }
+}
+
+.container {
+  max-width: 1440px;
+  width: 100%;
+  padding: 0 85px;
+  z-index: 1;
+
+  &--center {
+    @include flexible;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  &-col {
+    &-6 {
+      grid-column: span 6;
+    }
+    &-4 {
+      grid-column: span 4;
+    }
+  }
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.text-center {
+  text-align: center;
+}

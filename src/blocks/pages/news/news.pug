@@ -1,0 +1,21 @@
+include ../../../views/helpers/mixins
+
+- var newsItems = [{img: '/img/news-item1.png', date: '10.12.2026', title: 'Объединение компаний федерального уровня', text: 'Холдинг федерального значения «Kavaya Group» объединяет лучшие компании, являющиеся лидерами в занимаемых секторах внутреннего рынка – «Lafinele», «Food Milk», «Ваша Ферма».', link: '/article'},{img: '/img/news-item1.png', date: '10.12.2026', title: 'Объединение компаний федерального уровня', text: 'Холдинг федерального значения «Kavaya Group» объединяет лучшие компании, являющиеся лидерами в занимаемых секторах внутреннего рынка – «Lafinele», «Food Milk», «Ваша Ферма».', link: '/'},{img: '/img/news-item1.png', date: '10.12.2026', title: 'Объединение компаний федерального уровня', text: 'Холдинг федерального значения «Kavaya Group» объединяет лучшие компании, являющиеся лидерами в занимаемых секторах внутреннего рынка – «Lafinele», «Food Milk», «Ваша Ферма».', link: '/'},{img: '/img/news-item1.png', date: '10.12.2026', title: 'Объединение компаний федерального уровня', text: 'Холдинг федерального значения «Kavaya Group» объединяет лучшие компании, являющиеся лидерами в занимаемых секторах внутреннего рынка – «Lafinele», «Food Milk», «Ваша Ферма».', link: '/'},{img: '/img/news-item1.png', date: '10.12.2026', title: 'Объединение компаний федерального уровня', text: 'Холдинг федерального значения «Kavaya Group» объединяет лучшие компании, являющиеся лидерами в занимаемых секторах внутреннего рынка – «Lafinele», «Food Milk», «Ваша Ферма».', link: '/'},{img: '/img/news-item1.png', date: '10.12.2026', title: 'Объединение компаний федерального уровня', text: 'Холдинг федерального значения «Kavaya Group» объединяет лучшие компании, являющиеся лидерами в занимаемых секторах внутреннего рынка – «Lafinele», «Food Milk», «Ваша Ферма».', link: '/'}]
+
+main(class='main')
+	section(class='section section--dark section--press')
+		div(class='press-background')
+			video(class='press-background__video' poster='img/news-poster.png' muted loop autoplay playsinline preload='auto')
+				source(src='img/video/news-lenta.mp4' type='video/mp4')
+			div(class='press-background__blur-layer')
+		div(class='container')
+			div(class='heading-wrapper')
+				h1(class='heading__title subheading subheading--light') Пресс-центр
+				p(class='heading__text') Приветствуем вас на странице пресс-службы группы компаний «Kavaya». Мы всегда готовы оказать вам своевременную информационную поддержку, ответить на вопросы и предоставить экспертные комментарии.
+
+	section(class='section section--light section--news')
+		div(class='container container--center flex-column')
+			ul.news-list
+				each item in newsItems
+					+news-card(item)
+			+button('ещё', 'button')

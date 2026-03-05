@@ -1,0 +1,20 @@
+mixin button(text, type = 'button', mods = [])
+	//- text: текст кнопки
+	//- type: тип кнопки (button, submit, reset) - по умолчанию 'button'
+	//- mods: массив модификаторов для разных стилей
+	button.button(
+		class=mods.map(m => `button--${m}`).join(' ')
+		type=type
+	)&attributes(attributes)= text
+
+
+mixin news-card(item)
+	//- item - объект с данными новости
+	article.news-card
+		a.news-card__link(href=item.link)
+			div.news-card__image-wrapper
+				img.news-card__image(src=item.img alt=item.title)
+			div.news-card__content
+				span.news-card__date= item.date
+				p.news-card__title= item.title
+				p.news-card__text= item.text

@@ -1,0 +1,19 @@
+div(class='container header__wrapper footer__wrapper')
+	a(class=`logo ${page === 'main' ? 'logo--nolink' : ''}` href='/')
+		img(class='logo__image' src='img/logo.png' alt='Логотип Kavaya Group')
+		span(class='logo__text') Kavaya Group
+	div(class='language')
+		button(class='language__button' type='button' data-language='')
+			img(class='language__icon' src="img/RU-icon.svg" alt="Иконка выбранного языка")
+			span(class='language__value') RU
+			svg(class='language__arrow' viewBox="0 0 12 7")
+				use(xlink:href='img/svg/sprite.svg#arrow-down')
+	nav(class='nav')
+		ul(class='nav__list')
+			li(class='nav__item')
+				a(class='nav__link' href='/business') Сектора бизнеса
+			li(class='nav__item')
+				a(class='nav__link' href='/') Контакты
+			li(class='nav__item')
+				a(class='nav__link' href='/news') Новости
+	a(class='email' href='mailto:contact@kavaya.group.com') contact@kavaya.group.com

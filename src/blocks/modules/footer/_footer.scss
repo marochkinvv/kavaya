@@ -1,0 +1,29 @@
+.footer {
+  @include flexible;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  padding: 160px 0;
+  background-color: $primary-color;
+  color: $color-light;
+}
+
+.copyright {
+  font-family: $primary-font-family;
+  color: $color-light;
+  font-size: 13px;
+  font-weight: $font-medium;
+
+  &-text {
+    @extend .copyright;
+    opacity: 0.5;
+    text-align: right;
+    max-width: 456px;
+  }
+
+  &-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+}

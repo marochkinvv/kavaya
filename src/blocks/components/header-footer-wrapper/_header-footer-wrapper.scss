@@ -1,0 +1,114 @@
+$main-page-bg: rgb(255, 255, 255, 0.06);
+
+.header__wrapper,
+.footer__wrapper {
+  @include flexible;
+  justify-content: flex-start;
+  z-index: 2;
+}
+
+.header .header__wrapper {
+  padding: 27px 40px;
+  border-radius: 10px;
+  backdrop-filter: blur(20px);
+  background-color: $main-page-bg;
+}
+
+.footer .footer__wrapper {
+  background-color: $primary-color;
+  margin-bottom: 48px;
+}
+
+.logo {
+  margin-right: 51px;
+  @include flexible;
+  gap: 10px;
+
+  &__image {
+    width: 65px;
+    height: 50px;
+    display: block;
+  }
+
+  &__text {
+    font-family: $secondary-font-family;
+    color: $color-light;
+    font-size: 24px;
+    font-weight: $font-medium;
+  }
+
+  &--nolink {
+    pointer-events: none;
+    cursor: default;
+  }
+}
+
+.footer .footer__wrapper .logo {
+  margin-right: 80px;
+}
+
+.footer .footer__wrapper .logo__image {
+  width: 87px;
+  height: 75px;
+}
+
+.language {
+  @include flexible;
+  margin-right: 100px;
+
+  &__button {
+    @include flexible;
+    gap: 10px;
+  }
+
+  &__icon {
+    width: 26px;
+    height: 24px;
+  }
+
+  &__arrow {
+    width: 12px;
+    height: 10px;
+    & use {
+      color: $color-light;
+    }
+  }
+}
+
+.footer .footer__wrapper .language {
+  display: none;
+}
+
+.nav {
+  &__list {
+    @include flexible;
+    gap: 50px;
+  }
+
+  &__link {
+    display: block;
+    font-family: $secondary-font-family;
+    font-size: 16px;
+    font-weight: $font-medium;
+    color: inherit;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}
+
+.email {
+  color: inherit;
+  padding: 10.5px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 35px;
+  display: block;
+  margin-left: auto;
+  transition: opacity 0.3s ease;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
