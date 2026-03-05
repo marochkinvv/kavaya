@@ -1,0 +1,42 @@
+include ../../../views/helpers/mixins
+
+main(class='main')
+	section(class='section section--dark section--contacts')
+		div(class='contacts-background')
+			video(class=' contacts-background__video' poster='img/news-poster.png' muted loop autoplay playsinline preload='auto')
+				source(src='img/video/news-lenta.mp4' type='video/mp4')
+			div(class='contacts-background__blur-layer')
+		div(class='container')
+			h1(class='subheading subheading--light contacts__title') Контакты
+			div(class='contacts__wrapper')
+				address(class='contacts__address flex-column')
+					a(class='contacts__email' href='mailto:pr@kavaya.group') pr@kavaya.group
+					a(class='contacts__phone' href='tel:+74957787777') +7 495 778 77 77
+					p(class='contacts__location') Россия, 129347, г. Москва, Ярославское ш., д. 146, корп. 2, пом. 063
+				form(class='contacts__form flex-column')
+					h2(class='contacts__form-title') Обратная связь
+					div(class="contacts__inputs")
+						+input({
+							type: 'text',
+							autocomplete: 'name',
+							name: 'name',
+							maxlength: 52,
+							required: true,
+							label: 'Как к Вам обратиться'
+						})
+						+input({
+							type: 'email',
+							autocomplete: 'email',
+							name: 'email',
+							maxlength: 52,
+							required: true,
+							label: 'Ваш email',
+						})
+						+input({
+							type: 'text',
+							name: 'message',
+							maxlength: 500,
+							required: true,
+							label: 'Ваше сообщение'
+						})
+					+button('отправить', 'submit')(class='contacts__form-button')
