@@ -1,10 +1,18 @@
 .section {
   &--press {
     padding-bottom: 470px;
+
+    @include mobile {
+      padding-bottom: 60px;
+    }
   }
 
   &--news {
     padding: 80px 0 120px;
+
+    @include mobile {
+      padding: 50px 0;
+    }
   }
 }
 
@@ -13,6 +21,12 @@
     display: flex;
     max-width: 880px;
     gap: 50px;
+
+    @include mobile {
+      max-width: 100%;
+      flex-direction: column;
+      gap: 200px;
+    }
   }
   &__title {
     white-space: nowrap;
@@ -35,6 +49,15 @@
   box-sizing: content-box;
   pointer-events: none;
 
+  @include mobile {
+    top: -200px;
+    width: 561px;
+    height: auto;
+    border: 130px solid rgb(11, 29, 43);
+    aspect-ratio: 561 / 316;
+    bottom: unset;
+  }
+
   &__video {
     position: absolute;
     top: 0;
@@ -45,6 +68,11 @@
     display: block;
     z-index: 1;
     transform: translateY(160px);
+
+    @include mobile {
+      transform: none;
+      height: auto;
+    }
   }
 
   &__blur-layer {
@@ -58,6 +86,16 @@
     box-shadow: inset 0px 0px 1000px 80px rgb(11, 29, 43);
     border: 215px solid rgb(11, 29, 43);
     pointer-events: none;
+
+    @include mobile {
+      top: -105px;
+      left: -130px;
+      right: -130px;
+      bottom: -90px;
+      filter: blur(20px);
+      box-shadow: inset 0px 0px 10px 80px rgb(11, 29, 43);
+      border: 130px solid rgb(11, 29, 43);
+    }
   }
 }
 
@@ -67,4 +105,10 @@
   row-gap: 30px;
   column-gap: 60px;
   margin-bottom: 90px;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-bottom: 60px;
+  }
 }

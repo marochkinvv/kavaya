@@ -10,6 +10,8 @@ div(class='container header__wrapper footer__wrapper')
 				use(xlink:href='img/svg/sprite.svg#arrow-down')
 	nav(class='nav')
 		ul(class='nav__list')
+			li(class='nav__item nav__item--main')
+				a(class='nav__link' href='/') Главная
 			li(class='nav__item')
 				a(class='nav__link' href='/business') Сектора бизнеса
 			li(class='nav__item')
@@ -17,3 +19,6 @@ div(class='container header__wrapper footer__wrapper')
 			li(class='nav__item')
 				a(class='nav__link' href='/news') Новости
 	a(class='email' href='mailto:contact@kavaya.group.com') contact@kavaya.group.com
+	label(class='burger')
+		input(class='burger__checkbox visually-hidden' type='checkbox')
+		span(class='burger__line')

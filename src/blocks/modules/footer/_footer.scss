@@ -6,6 +6,10 @@
   padding: 160px 0;
   background-color: $primary-color;
   color: $color-light;
+
+  @include mobile {
+    padding: 50px 0;
+  }
 }
 
 .copyright {
@@ -19,11 +23,21 @@
     opacity: 0.5;
     text-align: right;
     max-width: 456px;
+
+    @include mobile {
+      text-align: left;
+    }
   }
 
   &-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+
+    @include mobile {
+      flex-direction: column-reverse;
+      gap: 50px;
+      align-items: flex-start;
+    }
   }
 }

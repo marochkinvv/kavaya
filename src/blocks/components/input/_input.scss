@@ -59,4 +59,16 @@
     will-change: font-size, top, left, opacity;
     transition: all 0.5s ease 0.15s;
   }
+
+  @include mobile {
+    width: 100%;
+
+    &__label {
+      font-size: 16px;
+    }
+
+    &:has(input[name='message']) {
+      margin-top: 80px;
+    }
+  }
 }

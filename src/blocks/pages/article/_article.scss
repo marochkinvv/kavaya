@@ -1,6 +1,10 @@
 .section {
   &--article {
     padding: 80px 120px;
+
+    @include mobile {
+      padding: 50px 0;
+    }
   }
 }
 
@@ -8,10 +12,21 @@
   display: flex;
   gap: 30px;
 
+  @include mobile {
+    @include column;
+    gap: 20px;
+  }
+
   &__image-wrapper {
     width: 500px;
     height: 380px;
     flex: none;
+
+    @include mobile {
+      width: 100%;
+      height: fit-content;
+      aspect-ratio: 340 / 197;
+    }
   }
 
   &__image {
@@ -26,6 +41,10 @@
     display: flex;
     flex-direction: column;
     padding: 0 30px;
+
+    @include mobile {
+      padding: 0;
+    }
   }
 
   &__date {
@@ -35,14 +54,20 @@
     font-weight: $font-medium;
     font-size: 12px;
     color: $color-info;
+
+    @include mobile {
+      margin-bottom: 20px;
+    }
   }
 
   &__title {
-    font-family: $secondary-font-family;
-    font-weight: $font-medium;
-    font-size: 23px;
+    @include secondaryText;
     color: $color-dark;
     margin-bottom: 24px;
+
+    @include mobile {
+      font-size: 20px;
+    }
   }
 
   &__text {
@@ -57,5 +82,10 @@
     font-weight: $font-medium;
     font-size: 32px;
     margin-bottom: 80px;
+
+    @include mobile {
+      margin-bottom: 20px;
+      font-size: 20px;
+    }
   }
 }

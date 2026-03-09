@@ -1,18 +1,32 @@
 .section {
   &--contacts {
     padding: 0 0 638px;
+
+    @include mobile {
+      padding: 0 0 80px;
+    }
   }
 }
 
 .contacts {
   &__title {
     margin-bottom: 90px;
+
+    @include mobile {
+      margin-bottom: 0;
+      padding-bottom: 206px;
+    }
   }
 
   &__wrapper {
     display: flex;
     justify-content: space-between;
     gap: 285px;
+
+    @include mobile {
+      flex-direction: column;
+      gap: 50px;
+    }
   }
 
   &__address {
@@ -30,6 +44,10 @@
     &:hover {
       color: rgb(187, 177, 132);
     }
+
+    @include mobile {
+      font-size: 16px;
+    }
   }
 
   &__phone {
@@ -40,6 +58,7 @@
     display: block;
     transition: opacity 0.3s ease;
     width: fit-content;
+    white-space: nowrap;
 
     &:hover {
       opacity: 0.5;
@@ -49,17 +68,23 @@
   &__location {
     color: $color-light;
     @include mainText;
+
+    @include mobile {
+      font-size: 16px;
+    }
   }
 
   &__form {
     flex-grow: 1;
 
     &-title {
-      font-family: $secondary-font-family;
+      @include secondaryText;
       color: $color-light;
-      font-size: 23px;
-      font-weight: $font-medium;
       margin-bottom: 61px;
+
+      @include mobile {
+        font-size: 23px;
+      }
     }
 
     &-button {
@@ -78,6 +103,11 @@
     & .input:has(input[name='message']) {
       grid-column: span 2;
     }
+
+    @include mobile {
+      @include column;
+      gap: 20px;
+    }
   }
 
   &-background {
@@ -92,6 +122,15 @@
     box-sizing: content-box;
     pointer-events: none;
 
+    @include mobile {
+      top: -200px;
+      width: 561px;
+      height: auto;
+      border: 130px solid rgb(11, 29, 43);
+      aspect-ratio: 561 / 316;
+      bottom: unset;
+    }
+
     &__video {
       position: absolute;
       top: 0;
@@ -102,6 +141,11 @@
       display: block;
       z-index: 1;
       transform: translateY(160px);
+
+      @include mobile {
+        transform: none;
+        height: auto;
+      }
     }
 
     &__blur-layer {
@@ -115,6 +159,16 @@
       box-shadow: inset 0px 0px 1000px 80px rgb(11, 29, 43);
       border: 215px solid rgb(11, 29, 43);
       pointer-events: none;
+
+      @include mobile {
+        top: -105px;
+        left: -130px;
+        right: -130px;
+        bottom: -90px;
+        filter: blur(20px);
+        box-shadow: inset 0px 0px 10px 80px rgb(11, 29, 43);
+        border: 130px solid rgb(11, 29, 43);
+      }
     }
   }
 }

@@ -4,16 +4,42 @@
   align-items: center;
 }
 
+@mixin column() {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
 @mixin mainText() {
   font-family: $primary-font-family;
   font-weight: $font-medium;
   font-size: 16px;
+
+  @include media($mobile) {
+    font-size: 12px;
+  }
+}
+
+@mixin secondaryText() {
+  font-family: $secondary-font-family;
+  font-weight: $font-medium;
+  font-size: 23px;
+
+  @include media($mobile) {
+    font-family: $primary-font-family;
+    font-size: 16px;
+  }
 }
 
 @mixin subheading() {
   font-family: $secondary-font-family;
   font-weight: $font-medium;
   font-size: 48px;
+
+  @include media($mobile) {
+    font-size: 20px;
+  }
 }
 
 @mixin line-clamp($lines) {
@@ -21,4 +47,16 @@
   -webkit-line-clamp: $lines;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+@mixin media($size) {
+  @media screen and (width < $size) {
+    @content;
+  }
+}
+
+@mixin mobile() {
+  @include media($mobile) {
+    @content;
+  }
 }

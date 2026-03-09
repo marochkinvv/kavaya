@@ -5,6 +5,10 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
+
+    @include mobile {
+      gap: 20px;
+    }
   }
 
   &__image {
@@ -17,6 +21,12 @@
     &-wrapper {
       width: 403px;
       height: 306px;
+
+      @include mobile {
+        width: 100%;
+        height: fit-content;
+        aspect-ratio: 340 / 197;
+      }
     }
   }
   &__content {
@@ -31,14 +41,20 @@
     font-weight: $font-medium;
     font-size: 12px;
     color: $color-info;
+
+    @include mobile {
+      margin-bottom: 20px;
+    }
   }
 
   &__title {
-    font-family: $secondary-font-family;
-    font-weight: $font-medium;
-    font-size: 23px;
+    @include secondaryText;
     color: $color-dark;
     margin-bottom: 24px;
+
+    @include mobile {
+      font-size: 20px;
+    }
   }
 
   &__text {

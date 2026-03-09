@@ -13,6 +13,19 @@ ul {
   padding: 0;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 body {
   font-family: $primary-font-family;
   color: $color-dark;
@@ -38,6 +51,10 @@ body {
   &--gold {
     background-color: $secondary-color;
   }
+
+  @include mobile {
+    @include column;
+  }
 }
 
 .container {
@@ -48,6 +65,10 @@ body {
 
   &--center {
     @include flexible;
+  }
+
+  @include media($mobile) {
+    padding: 0 25px;
   }
 }
 
